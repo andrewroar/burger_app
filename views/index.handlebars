@@ -1,0 +1,87 @@
+<div class="container">
+
+
+    <div class="row">
+
+        <div class="col">
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Yet to be Eaten</div>
+                <div class="card-body text-secondary">
+                    <div class="uneaten">
+                        <ul>
+                            {{#each burgers}}
+                            {{#unless devoured}}
+
+                            <li>
+                                <p><span class="label">ID:</span> {{this.id}}</p>
+                                <p><span class="label">burger_name:</span> {{this.burger_name}}</p>
+
+                            </li>
+                            {{> button devoured=false}}
+                            {{/unless}}
+                            {{/each}}
+                        </ul>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="card border-primary" style="max-width: 18rem;">
+            <div class="card-header">Eaten </div>
+            <div class="card-body text-secondary">
+                <ul>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <li>
+                        <p><span class="label">ID:</span> {{this.id}}</p>
+                        <p><span class="label">burger_name:</span> {{this.burger_name}}</p>
+
+                    </li>
+
+                    {{> button_delete}}
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+
+
+
+
+        </div>
+
+
+        <div class="col">
+
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                    <form class="new-burger">
+
+                        <div class="form-group">
+                            <label for="ca">Burger:</label>
+                            <input type="text" id="ca" name="burger_name">
+
+
+                        </div>
+
+
+
+                        <button type="submit">Add Burger</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+</div>
