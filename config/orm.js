@@ -25,7 +25,6 @@ const orm = {
   },
 
   updateOne: (table, devouredStatus, id, cb) => {
-    console.log("ORM devouted states: " + devouredStatus);
     let changeDevour = () => {
       if (devouredStatus === "true") {
         return false;
@@ -39,7 +38,7 @@ const orm = {
     console.log(typeof devouredStatus);
 
     let updatedDevour = changeDevour();
-    console.log("NEW devouted states: " + updatedDevour);
+
     const onQuery = (err, result) => {
       if (err) throw err;
       cb(result);
@@ -60,7 +59,7 @@ const orm = {
     };
 
     connection.query(
-      `delete FROM burger_db.${table} WHERE id = ?`,
+      `delete FROM ff9l1d6xo5gowve.${table} WHERE id = ?`,
       [id],
       onQuery
     );
