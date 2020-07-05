@@ -59,7 +59,7 @@ const orm = {
     };
 
     connection.query(
-      `delete FROM ff9l1d6xo5gowve.${table} WHERE id = ?`,
+      `delete FROM qff9l1d6xo5gowve.${table} WHERE id = ?`,
       [id],
       onQuery
     );
