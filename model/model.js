@@ -3,7 +3,7 @@ const orm = require("../config/orm.js");
 const burgerModel = {
   // The variables cols and vals are arrays.
   all: function (cb) {
-    orm.selectAll("qff9l1d6xo5gowve", cb);
+    orm.selectAll("qff9l1d6xo5gowve.burgers", cb);
   },
   insert: function (cols, cb) {
     orm.insertOne("burgers", cols, cb);
