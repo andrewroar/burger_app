@@ -22,7 +22,7 @@ if (process.env.JAWSDB_URL) {
     host: "localhost",
     user: "root",
     password: "hacktheplanet",
-    database: "burger_db",
+    database: "todoagain_db",
   });
 }
 
